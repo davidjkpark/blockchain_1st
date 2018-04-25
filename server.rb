@@ -11,7 +11,8 @@ get '/' do
 end
 
 get '/eating' do
-
+	aa.eat
+	"먹었음"
 end
 
 
