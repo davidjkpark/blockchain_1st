@@ -11,5 +11,5 @@ get '/mine' do
 end
 
 get '/make_a_transaction' do
-	"테스트 프로젝트"
+
 end
