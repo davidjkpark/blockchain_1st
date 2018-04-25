@@ -6,19 +6,10 @@ class Dog
 
 	def eat
 		@weight=@weight+0.5
-		puts @weight
 	end
 
-	def run
-		puts "뛰자!!"
+	def my_weight
+		@weight 
 	end
 
 end
-
-aa= Dog.new
-aa.eat
-aa.eat
-aa.run
-
-bb=Dog.new
-bb.eat
