@@ -29,6 +29,29 @@ class Puppy
 	end
 end
 
+#class Blockchain
+#	def initialize
+#		@hungry=0
+#	end
+#
+#	def mining
+#
+#	end
+#
+#	def transition
+#
+#	end
+#
+#	def make_genesis_block
+#
+#	end
+#
+#	def connect_blocks
+#		
+#	end
+#
+#end
+
 aa=Puppy.new
 bb=Puppy.new
 
