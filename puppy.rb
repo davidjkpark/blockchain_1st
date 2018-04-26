@@ -31,3 +31,6 @@ end
 
 aa=Puppy.new
 puts aa
+aa.run
+aa.coding
+aa.feed
