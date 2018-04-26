@@ -21,16 +21,21 @@ class Puppy
 	end
 
 	def bite
-
+		puts "아프지??"
 	end
 
 	def jumpoo
-
+		puts "씐나씐나!!!"
 	end
 end
 
 aa=Puppy.new
+bb=Puppy.new
+
 puts aa
 aa.run
 aa.coding
 aa.feed
+
+bb.feed
+bb.jumpoo
