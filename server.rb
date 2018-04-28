@@ -14,7 +14,8 @@ get '/' do
 		message<<"번호 : " + b['index'].to_s + "<br>"
 		message<<"시간 : " + b['time'].to_s + "<br>"
 		message<<"Nonce : " +b['nonce'].to_s + "<br>"
-		message<<"주소 : " + b['previous_address'].to_s + "<br>"
+		message<<"앞주소 : " + b['previous_address'].to_s + "<br>"
+		message<<"내주소 : " + Digest::SHA256.hexdigest(b.to_s) + "<br>"
 		message<<"<hr>"
 	end
 
