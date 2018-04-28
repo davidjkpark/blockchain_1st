@@ -13,12 +13,14 @@ class Blockchain
 			history<<nonce
 			hashed=Digest::SHA256.hexdigest(nonce.to_s)
 		end while hashed[0..3]!='0000'
+		nonce
 
-		tt=[]
+		block={
+			"index"=>1,
+			"time"=>Time.now,
+			"nonce"=>nonce
+		}
 
-		tt<<Time.now.to_f-current_time
-		tt<<nonce
-		tt
 
 	end
 
