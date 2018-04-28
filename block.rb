@@ -10,9 +10,12 @@ class Blockchain
 			hashed=Digest::SHA256.hexdigest(nonce.to_s)
 		end while hashed[0..3]!='0000'
 
-		Time.now.to_f-current_time
+		tt=[]
 
-		nonce
+		tt<<Time.now.to_f-current_time
+		tt<<nonce
+		tt
+
 
 	end
 
