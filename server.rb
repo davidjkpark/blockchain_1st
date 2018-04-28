@@ -11,10 +11,10 @@ get '/' do
 	message=""
 
 	aa.all_blocks.each do |b|
-		message<<b['index'].to_s + "<br>"
-		message<<b['time'].to_s + "<br>"
-		message<<b['nonce'].to_s + "<br>"
-		message<<b['previous_address'].to_s + "<br>"
+		message<<"번호 : " + b['index'].to_s + "<br>"
+		message<<"시간 : " + b['time'].to_s + "<br>"
+		message<<"Nonce : " +b['nonce'].to_s + "<br>"
+		message<<"주소 : " + b['previous_address'].to_s + "<br>"
 		message<<"<hr>"
 	end
 
