@@ -1,8 +1,10 @@
 class Blockchain
 
 	def mining
-
-		"블럭을 찾았습니다."
+		begin
+			nonce =rand(10)
+		end while nonce !=0
+		nonce
 	end
 
 	def transaction

@@ -11,7 +11,7 @@ get '/' do
 end
 
 get '/mine' do
-	aa.mining
+	aa.mining.to_s
 end
 
 
