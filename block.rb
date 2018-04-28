@@ -1,15 +1,9 @@
-class Dog
+class Blockchain
 
-	def initialize
-		@weight=0.5
+	def mining
+
+		"블럭을 찾았습니다."
 	end
 
-	def eat
-		@weight=@weight+0.5
-	end
-
-	def my_weight
-		@weight 
-	end
 
 end

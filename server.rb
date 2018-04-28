@@ -4,15 +4,14 @@ require 'sinatra'
 require './block'
 
 
-aa=Dog.new
+aa=Blockchain.new
 
 get '/' do
-	aa.my_weight.to_s
+	"블럭 리스트 입니다."
 end
 
-get '/eating' do
-	aa.eat
-	"먹었음"
+get '/mine' do
+	aa.mining
 end
 
 
