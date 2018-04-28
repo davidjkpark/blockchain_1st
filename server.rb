@@ -7,7 +7,11 @@ require './block'
 aa=Blockchain.new
 
 get '/' do
-	aa.all_blocks.to_s
+
+	message=""
+
+	aa.all_blocks.each do |b|
+
 end
 
 get '/mine' do
