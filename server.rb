@@ -8,7 +8,7 @@ aa=Blockchain.new
 
 get '/' do
 
-	message=""
+	message="<center>"
 
 	aa.all_blocks.each do |b|
 		message<<"번호 : " + b['index'].to_s + "<br>"
@@ -19,7 +19,7 @@ get '/' do
 		message<<"<hr>"
 	end
 
-message
+message + "</center>"
 
 end
 
