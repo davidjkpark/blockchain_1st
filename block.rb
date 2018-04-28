@@ -16,7 +16,6 @@ class Blockchain
 		tt<<nonce
 		tt
 
-
 	end
 
 	def transaction
