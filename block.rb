@@ -27,9 +27,8 @@ class Blockchain
 
 	end
 
-	def transaction
-
-		"거래완료!"
+	def all_blocks
+		@chain
 	end
 
 

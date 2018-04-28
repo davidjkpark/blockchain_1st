@@ -7,7 +7,7 @@ require './block'
 aa=Blockchain.new
 
 get '/' do
-	"블럭 리스트 입니다."
+	aa.all_blocks.to_s
 end
 
 get '/mine' do
