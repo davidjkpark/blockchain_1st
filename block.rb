@@ -6,7 +6,7 @@ class Blockchain
 			nonce =rand(100000)
 			history<<nonce
 		end while nonce !=0
-		history
+		history.size
 	end
 
 	def transaction
