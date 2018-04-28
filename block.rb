@@ -16,10 +16,13 @@ class Blockchain
 		nonce
 
 		block={
-			"index"=>1,
+			"index"=>@chain.size + 1,
 			"time"=>Time.now,
 			"nonce"=>nonce
 		}
+
+		@chain<<block
+		block
 
 
 	end
