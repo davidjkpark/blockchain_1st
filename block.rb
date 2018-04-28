@@ -1,5 +1,9 @@
 class Blockchain
 
+	def initialize
+		@chain=[]
+	end
+
 	def mining
 		history =[]
 		current_time=Time.now.to_f
