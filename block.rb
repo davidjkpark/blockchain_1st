@@ -1,8 +1,14 @@
+require 'securerandom'
+
 class Blockchain
 
 	def initialize
 		@chain=[]
 		@trans=[]
+	end
+
+	def make_a_new_wallet
+		SecureRandom.uuid
 	end
 
 	def make_a_trans(s,r,a)

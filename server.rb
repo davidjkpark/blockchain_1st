@@ -34,3 +34,7 @@ get '/trans' do
 	aa.make_a_trans(params["sender"],params["recv"],params["amount"]).to_s
 end
 
+get '/new_wallet' do
+	aa.make_a_new_wallet.to_s
+end
+
