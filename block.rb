@@ -8,7 +8,7 @@ class Blockchain
 	def make_a_trans(s,r,a)
 		trans={
 			"sender"=>s,
-			"reveiver"=>r,
+			"receiver"=>r,
 			"amount"=>a
 		}
 		@trans<<trans
