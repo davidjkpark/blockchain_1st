@@ -30,7 +30,8 @@ class Blockchain
 			"index"=>@chain.size + 1,
 			"time"=>Time.now,
 			"nonce"=>nonce,
-			"previous_address"=>Digest::SHA256.hexdigest(last_block.to_s)
+			"previous_address"=>Digest::SHA256.hexdigest(last_block.to_s),
+			"transactions"=>@trans
 		}
 
 		@chain<<block

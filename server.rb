@@ -16,6 +16,7 @@ get '/' do
 		message<<"Nonce : " +b['nonce'].to_s + "<br>"
 		message<<"앞주소 : " + b['previous_address'].to_s + "<br>"
 		message<<"내주소 : " + Digest::SHA256.hexdigest(b.to_s) + "<br>"
+		message<<"Transactions : " + b['transactions'].to_s + "<br>"
 		message<<"<hr>"
 	end
 
