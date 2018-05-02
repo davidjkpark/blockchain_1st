@@ -38,3 +38,7 @@ get '/new_wallet' do
 	aa.make_a_new_wallet.to_s
 end
 
+get '/all_wallet' do
+	aa.show_all_wallet.to_s
+end
+
