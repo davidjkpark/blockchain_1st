@@ -29,3 +29,7 @@ get '/mine' do
 end
 
 
+get '/trans' do
+	aa.make_a_trans
+end
+
