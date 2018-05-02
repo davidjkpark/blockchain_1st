@@ -4,9 +4,9 @@ class Blockchain
 		@chain=[]
 	end
 
-#	def make_a_trans
-
-#	end
+	def make_a_trans(s,r,a)
+		s+r+a
+	end
 
 	def mining
 		history =[]
