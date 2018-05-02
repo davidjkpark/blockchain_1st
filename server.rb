@@ -31,5 +31,6 @@ end
 
 get '/trans' do
 	aa.make_a_trans
+	params["sender"]	
 end
 
