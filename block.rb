@@ -23,6 +23,9 @@ class Blockchain
 			"돈없다!"
 		else
 
+			@wallet[s]=@wallet[s]-a.to_f
+			@wallet[r]=@wallet[r]+a.to_f
+
 			trans={
 				"sender"=>s,
 				"receiver"=>r,
