@@ -30,6 +30,6 @@ end
 
 
 get '/trans' do
-	aa.make_a_trans(params["sender"],params["recv"],params["amount"])
+	aa.make_a_trans(params["sender"],params["recv"],params["amount"]).to_s
 end
 

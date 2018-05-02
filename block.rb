@@ -2,10 +2,17 @@ class Blockchain
 
 	def initialize
 		@chain=[]
+		@trans=[]
 	end
 
 	def make_a_trans(s,r,a)
-		s+r+a
+		trans={
+			"sender"=>s,
+			"reveiver"=>r,
+			"amount"=>a
+		}
+		@trans<<trans
+		@trans
 	end
 
 	def mining
