@@ -8,7 +8,7 @@ class Blockchain
 	end
 
 	def make_a_new_wallet
-		SecureRandom.uuid
+		SecureRandom.uuid.gsub("-","")
 	end
 
 	def make_a_trans(s,r,a)
