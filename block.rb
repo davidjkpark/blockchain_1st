@@ -17,15 +17,20 @@ class Blockchain
 	def make_a_trans(s,r,a)
 		if @wallet[s].nil?
 			"보내는 주소가 잘못되었습니다"
-		else if @wallet[r].nil?
+		elsif @wallet[r].nil?
 			"받는 주소가 잘못되었습니다"
-		trans={
-			"sender"=>s,
-			"receiver"=>r,
-			"amount"=>a
-		}
-		@trans<<trans
-		@trans
+		elsif @wallet[s]<a.to_f
+			"돈없다!"
+		else
+
+			trans={
+				"sender"=>s,
+				"receiver"=>r,
+				"amount"=>a
+			}
+			@trans<<trans
+			@trans
+		end
 	end
 
 	def mining
