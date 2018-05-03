@@ -10,7 +10,6 @@ class Blockchain
 
 	def show_all_wallet
 		@wallet
-
 	end
 
 	def make_a_new_wallet
