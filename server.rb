@@ -12,7 +12,7 @@ get '/number_of_blocks' do
 end
 
 get '/ask' do
-	aa.ask_other_block
+	aa.ask_other_block.to_s
 end
 
 get '/' do
