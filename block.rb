@@ -1,4 +1,5 @@
 require 'securerandom'
+require 'HTTParty'
 
 class Blockchain
 
@@ -71,6 +72,10 @@ class Blockchain
 
 	def all_blocks
 		@chain
+	end
+
+	def ask_other_block
+		HTTParty.get("http://localhost:4567/number_of_blocks")
 	end
 
 

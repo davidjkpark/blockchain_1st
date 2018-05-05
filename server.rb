@@ -3,8 +3,17 @@
 require 'sinatra'
 require './block'
 
+set :port, 4567
 
 aa=Blockchain.new
+
+get '/number_of_blocks' do
+	aa.all_blocks.size.to_s
+end
+
+get '/ask' do
+	aa.ask_other_block
+end
 
 get '/' do
 
