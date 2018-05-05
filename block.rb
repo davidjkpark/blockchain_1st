@@ -79,6 +79,7 @@ class Blockchain
 		@node.each do |n|
 			other_block = HTTParty.get("http://localhost:"+n+"/number_of_blocks").body
 			if @chain.size < other_block.to_i
+				@chain.to_json
 				@chain=[]
 			end
 		end
