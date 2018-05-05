@@ -79,8 +79,9 @@ class Blockchain
 		HTTParty.get("http://localhost:4568/number_of_blocks")
 	end
 
-	def add_node
+	def add_node(node)
 		@node<<node
+		@node.uniq!
 		@node
 	end
 
