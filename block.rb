@@ -75,7 +75,7 @@ class Blockchain
 	end
 
 	def ask_other_block
-		HTTParty.get("http://localhost:4567/number_of_blocks")
+		HTTParty.get("http://localhost:4568/number_of_blocks")
 	end
 
 
