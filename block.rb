@@ -87,8 +87,8 @@ class Blockchain
 			other_block = HTTParty.get("http://localhost:"+n+"/number_of_blocks").body
 			if @chain.size < other_block.to_i
 				jsoned_chain=@chain.to_json
-				HTTParty.get("http://localhost:"+n+"/recv?blocks=" + jsoned_chain)
-				@chain=[]
+				full_chain=HTTParty.get("http://localhost:"+n+"/recv?blocks=" + jsoned_chain)
+				@chain=JSON.parse(full_chain)
 			end
 		end
 	end

@@ -14,6 +14,7 @@ end
 get '/recv' do
 	recv_block=JSON.parse(params["blocks"])
 	aa.recv(recv_block)
+	aa.all_blocks.to_json
 end
 
 get '/ask' do
