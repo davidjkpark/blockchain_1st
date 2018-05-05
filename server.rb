@@ -11,6 +11,11 @@ get '/number_of_blocks' do
 	aa.all_blocks.size.to_s
 end
 
+get '/recv' do
+	recv_block=JSON.parse(params["blocks"])
+	aa.recv(recv_block)
+end
+
 get '/ask' do
 	aa.ask_other_block.to_s
 end

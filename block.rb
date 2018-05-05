@@ -75,11 +75,19 @@ class Blockchain
 		@chain
 	end
 
+	def recv(blocks)
+		blocks.each do |b|
+			@chain << b
+		end
+		@chain
+	end
+
 	def ask_other_block
 		@node.each do |n|
 			other_block = HTTParty.get("http://localhost:"+n+"/number_of_blocks").body
 			if @chain.size < other_block.to_i
-				@chain.to_json
+				jsoned_chain=@chain.to_json
+				HTTParty.get("http://localhost:"+n+"/recv?blocks=" + jsoned_chain)
 				@chain=[]
 			end
 		end
