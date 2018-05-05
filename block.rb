@@ -76,7 +76,11 @@ class Blockchain
 	end
 
 	def ask_other_block
-		HTTParty.get("http://localhost:4568/number_of_blocks")
+		message=[]
+		@node.each do |n|
+			message << HTTParty.get("http://localhost:"+n+"/number_of_blocks").body
+		end
+		message
 	end
 
 	def add_node(node)
