@@ -7,6 +7,7 @@ class Blockchain
 		@chain=[]
 		@trans=[]
 		@wallet={}
+		@node=[]
 	end
 
 	def show_all_wallet
@@ -78,5 +79,9 @@ class Blockchain
 		HTTParty.get("http://localhost:4568/number_of_blocks")
 	end
 
+	def add_node
+		@node<<node
+		@node
+	end
 
 end
