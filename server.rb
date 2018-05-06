@@ -39,15 +39,13 @@ get '/' do
 		message<<"<hr>"
 	end
 
-message + "</center>"
+	message + "</center>"
 
 end
-
 
 get '/mine' do
 	aa.mining.to_s
 end
-
 
 get '/trans' do
 	aa.make_a_trans(params["sender"],params["recv"],params["amount"]).to_s
