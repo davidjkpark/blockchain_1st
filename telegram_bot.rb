@@ -19,6 +19,16 @@ Telegram::Bot::Client.run(token) do |bot|
 		target_price=JSON.parse(price)
 		real_price_usdt=target_price[0]['tradePrice']
 
+		url="https://api.fixer.io/latest?base=USD"
+		rate=HTTParty.get(url).body
+		parsed_rate=JSON.parse(rate)
+		target_rate=parsed_rate["rates"]["KRW"].to_i
+
+		msg=""
+		msg<<(real_price/10000).round(0).to_s + "만원\n"
+		msg<<"$" + (real_price_usdt).round(0).to_s + "\n"
+		msg<<(real_price/(real_price_usdt*target_rate)).round(2).to_s + "%"
+
       	bot.api.send_message(chat_id: message.chat.id, text: "BTC : "+ (real_price/10000).to_s + "만원\n" + "$" + (real_price_usdt).to_s)
     when '/stop'
       	bot.api.send_message(chat_id: message.chat.id, text: "빠잇!, #{message.from.first_name}")
