@@ -19,7 +19,7 @@ Telegram::Bot::Client.run(token) do |bot|
 		target_price=JSON.parse(price)
 		real_price_usdt=target_price[0]['tradePrice']
 
-      	bot.api.send_message(chat_id: message.chat.id, text: "BTC : "+ (real_price/10000).to_s + "만원")
+      	bot.api.send_message(chat_id: message.chat.id, text: "BTC : "+ (real_price/10000).to_s + "만원\n" + "$" + (real_price_usdt).to_s)
     when '/stop'
       	bot.api.send_message(chat_id: message.chat.id, text: "빠잇!, #{message.from.first_name}")
     end
