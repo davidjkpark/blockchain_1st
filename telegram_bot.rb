@@ -9,6 +9,8 @@ Telegram::Bot::Client.run(token) do |bot|
     when '/start'
     	bot.api.send_message(chat_id: message.chat.id, text: "안녕하세요, #{message.from.first_name}")
     when '/price'
+
+      3.times do
     	url="https://crix-api-endpoint.upbit.com/v1/crix/candles/minutes/1?code=CRIX.UPBIT.KRW-BTC"
 		price=HTTParty.get(url).body
 		target_price=JSON.parse(price)
@@ -30,6 +32,9 @@ Telegram::Bot::Client.run(token) do |bot|
 		msg<<((real_price/(real_price_usdt*target_rate)-1)*100).round(2).to_s + "%"
 
       	bot.api.send_message(chat_id: message.chat.id, text: msg)
+      	sleep(5)
+      end
+
     when '/stop'
       	bot.api.send_message(chat_id: message.chat.id, text: "빠잇!, #{message.from.first_name}")
     end
