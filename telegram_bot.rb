@@ -13,7 +13,12 @@ Telegram::Bot::Client.run(token) do |bot|
 		price=HTTParty.get(url).body
 		target_price=JSON.parse(price)
 		real_price=target_price[0]['tradePrice']
-      	btc_price='1050'
+
+    	url="https://crix-api-endpoint.upbit.com/v1/crix/candles/minutes/1?code=CRIX.UPBIT.USDT-BTC"
+		price=HTTParty.get(url).body
+		target_price=JSON.parse(price)
+		real_price_usdt=target_price[0]['tradePrice']
+
       	bot.api.send_message(chat_id: message.chat.id, text: "BTC : "+ (real_price/10000).to_s + "만원")
     when '/stop'
       	bot.api.send_message(chat_id: message.chat.id, text: "빠잇!, #{message.from.first_name}")
