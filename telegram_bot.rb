@@ -27,9 +27,9 @@ Telegram::Bot::Client.run(token) do |bot|
 		msg=""
 		msg<<(real_price/10000).round(0).to_s + "만원\n"
 		msg<<"$" + (real_price_usdt).round(0).to_s + "\n"
-		msg<<(real_price/(real_price_usdt*target_rate)).round(2).to_s + "%"
+		msg<<((real_price/(real_price_usdt*target_rate)-1)*100).round(2).to_s + "%"
 
-      	bot.api.send_message(chat_id: message.chat.id, text: "BTC : "+ (real_price/10000).to_s + "만원\n" + "$" + (real_price_usdt).to_s)
+      	bot.api.send_message(chat_id: message.chat.id, text: msg)
     when '/stop'
       	bot.api.send_message(chat_id: message.chat.id, text: "빠잇!, #{message.from.first_name}")
     end
