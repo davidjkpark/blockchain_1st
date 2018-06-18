@@ -1,5 +1,5 @@
 require 'securerandom'
-require 'HTTParty'
+require 'httparty'
 
 class Blockchain
 
